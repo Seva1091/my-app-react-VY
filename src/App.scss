@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(192, 192, 192);
+    background: linear-gradient(320deg, rgb(35, 195, 198) 0%, rgba(255,255,255,1) 200%);
+    margin: 10px;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.nav {
+    background-color: rgba(255,255,255,0.3);
+    padding: 10px;
+    align-self: center;
+    min-width: 40em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav > div {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 50em;
+    width: 6em;
+    text-align: center;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 50em;
+    color: white;
+    min-width: 6em;
+    text-align: center;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50em;
+    color: black;
+    min-width: 6em;
+    text-align: center;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.tag {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    min-width: 6em;
+    max-width: 6em;
+}
+
+.container-back {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    min-width: 30em;
+    max-width: 60em;
+}
+
+.container404 {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    min-width: 30em;
+    text-align: center;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50em;
+    margin: 5px;
+    padding: 5px;
+}
+
+input:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+input:active {
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.post {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    align-items: center;
+    min-width: 30em;
+    max-width: 60em;
+}
+
+a { text-decoration: none;
+font-weight: bold; }
+
+a, a:link {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
