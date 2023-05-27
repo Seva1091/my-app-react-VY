@@ -1,117 +1,125 @@
+html {
+  min-height: 100%;
+}
+
 body {
-    background-color: rgb(192, 192, 192);
-    background: linear-gradient(320deg, rgb(35, 195, 198) 0%, rgba(255,255,255,1) 200%);
-    margin: 10px;
-    align-items: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    320deg,
+    rgb(35, 195, 198) 0%,
+    rgb(255, 255, 255) 200%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .nav {
-    background-color: rgba(255,255,255,0.3);
-    padding: 10px;
-    align-self: center;
-    min-width: 40em;
-    display: flex;
-    justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0rem 1rem 0rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  width: 60em;
+  border-radius: 0rem 0rem 1rem 1rem;
+  left: 0px;
+  right: 0px;
+  top: 0px;
 }
 
-.nav > div {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 50em;
-    width: 6em;
-    text-align: center;
+.nav-link {
+  background-color: none;
+  color: rgb(65, 65, 65);
+  padding: 0.5rem;
+  height: 2em;
+  width: 9em;
+  text-align: center;
+  top: 0px;
 }
 
-button {
-    background-color: rgba(0, 0, 0, 0.3);
-    border: none;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 50em;
-    color: white;
-    min-width: 6em;
-    text-align: center;
-    font-weight: bold;
+.link404 {
+  background-color: none;
+  color: rgb(65, 65, 65);
+  padding: 0.5rem;
+  display: block;
+  text-align: center;
+  border-radius: 1rem;
 }
 
-button:hover {
-    background-color: white;
-    padding: 10px;
-    border-radius: 50em;
-    color: black;
-    min-width: 6em;
-    text-align: center;
-    transition: 0.3s;
-    font-weight: bold;
+.nav-link:hover,
+.link404:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-link:active,
+.link404:active {
+  background-color: rgb(0, 55, 255);
+  color: white;
+}
+
+.container-tags {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .tag {
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 2px;
-    margin-bottom: 5px;
-    min-width: 6em;
-    max-width: 6em;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2px;
+  width: 6em;
 }
 
 .container-back {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 10px;
-    align-items: center;
-    min-width: 30em;
-    max-width: 60em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  align-items: center;
+  min-width: 30em;
+  max-width: 60em;
 }
 
-.container404 {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 10px;
-    align-items: center;
-    min-width: 30em;
-    text-align: center;
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-input {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    border-radius: 50em;
-    margin: 5px;
-    padding: 5px;
+.title,
+.message,
+.tags,
+.email,
+.password {
+  max-width: 30em;
 }
 
-input:hover {
-    background-color: rgb(255, 255, 255);
-    transition: 0.3s;
-}
-
-input:active {
-    background-color: rgb(255, 255, 255);
-    transition: 0.3s;
+.container-button {
+  display: flex;
+  gap: 1rem;
 }
 
 .post {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    margin: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    align-items: center;
-    min-width: 30em;
-    max-width: 60em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
 }
 
-a { text-decoration: none;
-font-weight: bold; }
-
-a, a:link {
-    color: white;
+.post-area {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-a:hover {
-    color: black;
+a {
+  text-decoration: none;
 }

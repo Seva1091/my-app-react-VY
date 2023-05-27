@@ -1,6 +1,9 @@
+import Button from "@mui/material/Button";
 import "../../App.scss";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { ChangeEvent, FormEvent, useState } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
@@ -36,32 +39,41 @@ export const Register = () => {
 
   return (
     <div className="container-back">
-    <div className="post">
-      <form onSubmit={register}>
-        <label htmlFor="email">
-          Email:
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmail}
-          />
-        </label>
-        <br></br>
-        <label htmlFor="password">
-          Password:
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handlePassword}
-          />
-        </label>
-        <br></br>
-        <button type="submit">Sign in</button>
-      </form>
-    </div>
-
+      <div className="post">
+        <h3>Registration</h3>
+        <Box
+          onSubmit={register}
+          component="form"
+          noValidate
+          autoComplete="off"
+        >
+          <div className="input-area">
+            <TextField
+              required
+              type="email"
+              className="email"
+              label="Email"
+              value={email}
+              onChange={handleEmail}
+              variant="filled"
+            />
+            <TextField
+              className="password"
+              label="Password"
+              type="password"
+              value={password}
+              onChange={handlePassword}
+              autoComplete="current-password"
+              variant="filled"
+            />
+            <div className="container-button">
+              <Button variant="contained" type="submit">
+                Sign in
+              </Button>
+            </div>
+          </div>
+        </Box>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,8 @@
+import Button from "@mui/material/Button";
 import "../../App.scss";
 import { usePostHook } from "./hooks/postHook";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 export const Post = () => {
   const {
@@ -17,58 +20,67 @@ export const Post = () => {
       <div className="post">
         {isReadOnly ? (
           <>
-            <button onClick={handleEdit}>Edit</button>
+            <Button variant="contained" onClick={handleEdit}>
+              Edit
+            </Button>
             <h2>{post.title}</h2>
             <span>{post.body}</span>
             <h3>{post.userId}</h3>
-            {post.tags.map((tag, index) => (
-              <div key={index}>
-                <div className="tag">{tag}</div>
-              </div>
-            ))}
+            <div className="container-tags">
+              {post.tags.map((tag, index) => (
+                <div key={index}>
+                  <div className="tag">{tag}</div>
+                </div>
+              ))}
+            </div>
             <p>Reactions: {post.reactions}</p>
           </>
         ) : (
           <>
-            <span>Edit post:</span>
+            <h3>Edit post:</h3>
             <h2>{post.title}</h2>
-            <form onSubmit={handleSave}>
-              <div>
-                <label htmlFor="title">
-                  Title:
-                  <input
-                    type="text"
-                    id="title"
-                    name="title"
-                    onChange={handleChange}
-                  />
-                </label>
+            <Box onSubmit={handleSave} component="form" noValidate>
+              <div className="input-area">
+                <TextField
+                  required
+                  type="text"
+                  className="title"
+                  name="title"
+                  label="Title"
+                  value={post.title}
+                  onChange={handleChange}
+                  variant="filled"
+                />
+                <TextField
+                  required
+                  type="text"
+                  className="message"
+                  name="body"
+                  label="Message"
+                  multiline
+                  value={post.body}
+                  onChange={handleChange}
+                  variant="filled"
+                />
+                <TextField
+                  type="text"
+                  inputProps={{ maxLength: 10 }}
+                  className="tags"
+                  name="tags"
+                  label="Tag"
+                  onChange={handleChange}
+                  variant="filled"
+                />
+                <div className="container-button">
+                  <Button variant="contained" type="submit">
+                    Save
+                  </Button>
+                  <Button variant="contained" onClick={handleDelete}>
+                    Delete
+                  </Button>
+                </div>
               </div>
-              <div>
-                <label htmlFor="body">
-                  Message:
-                  <input
-                    type="text"
-                    id="body"
-                    name="body"
-                    onChange={handleChange}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="tags">
-                  Tag:
-                  <input
-                    type="text"
-                    id="tags"
-                    name="tags"
-                    onChange={handleChange}
-                  />
-                </label>
-              </div>
-              <button type="submit">Save</button>
-              <button onClick={handleDelete}>Delete</button>
-            </form>
+            </Box>
           </>
         )}
       </div>

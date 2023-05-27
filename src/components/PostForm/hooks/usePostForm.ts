@@ -11,7 +11,7 @@ export const usePostForm = (): UsePostFormData => {
   const [post, setPost] = useState<PostType>({
     title: "",
     body: "",
-    userId: 0,
+    userId: 1,
     tags: [],
     reactions: 0,
   });

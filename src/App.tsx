@@ -1,7 +1,7 @@
 import "./App.scss";
 import { firebaseConfig } from "./firebaseConfig";
 import { initializeApp } from "firebase/app";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
 import { NotFound } from "./components/NotFound";
@@ -26,6 +26,26 @@ function App() {
 
   return (
     <div className="App">
+      <nav className="nav">
+        <Link className="nav-link" to="/">
+          Home
+        </Link>
+        <Link className="nav-link" to="/posts">
+          Posts
+        </Link>
+        <Link className="nav-link" to="/posts/1">
+          1st post
+        </Link>
+        <Link className="nav-link" to="/posts/new">
+          Create post
+        </Link>
+        <Link className="nav-link" to="/register">
+          Register
+        </Link>
+        <Link className="nav-link" to="/login">
+          Login
+        </Link>
+      </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />

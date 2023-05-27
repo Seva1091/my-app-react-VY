@@ -14,11 +14,13 @@ export const PostsList = ({ list }: PostsListProps) => {
             <h2>{title}</h2>
             <span>{body}</span>
             <h3>{userId}</h3>
-            {tags.map((tag, index) => (
-              <div key={index}>
-                <div className="tag">{tag}</div>
-              </div>
-            ))}
+            <div className="container-tags">
+              {tags.map((tag, index) => (
+                <div key={index}>
+                  <div className="tag">{tag}</div>
+                </div>
+              ))}
+            </div>
             <p>Reactions: {reactions}</p>
           </div>
         ))}
